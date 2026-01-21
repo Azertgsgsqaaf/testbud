@@ -1,0 +1,202 @@
+[
+  {
+    "classement": 1,
+    "joueur": "ZywOo",
+    "equipe": "Team Vitality",
+    "nationalite": "France",
+    "role": "AWPer / Hybrid",
+    "arme_preferee": "AWP",
+    "maps_preferees": ["Inferno", "Mirage", "Nuke"],
+    "skin_le_plus_cher": "Butterfly Knife | Doppler Sapphire"
+  },
+  {
+    "classement": 2,
+    "joueur": "donk",
+    "equipe": "Team Spirit",
+    "nationalite": "Russie",
+    "role": "Entry Fragger",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Ancient", "Dust II", "Mirage"],
+    "skin_le_plus_cher": "Butterfly Knife | Doppler Ruby"
+  },
+  {
+    "classement": 3,
+    "joueur": "ropz",
+    "equipe": "Team Vitality",
+    "nationalite": "Estonie",
+    "role": "Lurker",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Nuke", "Ancient", "Mirage"],
+    "skin_le_plus_cher": "Karambit | Doppler Sapphire"
+  },
+  {
+    "classement": 4,
+    "joueur": "m0NESY",
+    "equipe": "Falcons",
+    "nationalite": "Russie",
+    "role": "AWPer",
+    "arme_preferee": "AWP",
+    "maps_preferees": ["Mirage", "Inferno", "Ancient"],
+    "skin_le_plus_cher": "AWP | Dragon Lore"
+  },
+  {
+    "classement": 5,
+    "joueur": "sh1ro",
+    "equipe": "Team Spirit",
+    "nationalite": "Russie",
+    "role": "AWPer",
+    "arme_preferee": "AWP",
+    "maps_preferees": ["Anubis", "Mirage", "Ancient"],
+    "skin_le_plus_cher": "Karambit | Case Hardened (Blue Gem)"
+  },
+  {
+    "classement": 6,
+    "joueur": "molodoy",
+    "equipe": "FURIA",
+    "nationalite": "Russie",
+    "role": "Rifler",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Mirage", "Nuke", "Vertigo"],
+    "skin_le_plus_cher": "M9 Bayonet | Doppler Sapphire"
+  },
+  {
+    "classement": 7,
+    "joueur": "flameZ",
+    "equipe": "Team Vitality",
+    "nationalite": "Israël",
+    "role": "Entry Fragger",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Nuke", "Anubis", "Mirage"],
+    "skin_le_plus_cher": "Karambit | Gamma Doppler (Emerald)"
+  },
+  {
+    "classement": 8,
+    "joueur": "frozen",
+    "equipe": "FaZe Clan",
+    "nationalite": "Slovaquie",
+    "role": "Rifler",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Ancient", "Mirage", "Nuke"],
+    "skin_le_plus_cher": "AWP | Gungnir"
+  },
+  {
+    "classement": 9,
+    "joueur": "KSCERATO",
+    "equipe": "FURIA",
+    "nationalite": "Brésil",
+    "role": "Lurker",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Ancient", "Vertigo", "Inferno"],
+    "skin_le_plus_cher": "AK-47 | Wild Lotus"
+  },
+  {
+    "classement": 10,
+    "joueur": "Spinx",
+    "equipe": "MOUZ",
+    "nationalite": "Israël",
+    "role": "Rifler",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Nuke", "Mirage", "Anubis"],
+    "skin_le_plus_cher": "Butterfly Knife | Gamma Doppler (Emerald)"
+  },
+  {
+    "classement": 11,
+    "joueur": "Twistzz",
+    "equipe": "Team Liquid",
+    "nationalite": "Canada",
+    "role": "Rifler / Support",
+    "arme_preferee": "M4A1-S",
+    "maps_preferees": ["Anubis", "Ancient", "Inferno"],
+    "skin_le_plus_cher": "M4A4 | Howl"
+  },
+  {
+    "classement": 12,
+    "joueur": "mezii",
+    "equipe": "Team Vitality",
+    "nationalite": "Royaume-Uni",
+    "role": "Support / Anchor",
+    "arme_preferee": "M4A1-S",
+    "maps_preferees": ["Nuke", "Inferno", "Anubis"],
+    "skin_le_plus_cher": "Skeleton Knife | Fade"
+  },
+  {
+    "classement": 13,
+    "joueur": "Senzu",
+    "equipe": "The MongolZ",
+    "nationalite": "Mongolie",
+    "role": "Rifler",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Ancient", "Mirage", "Anubis"],
+    "skin_le_plus_cher": "Talon Knife | Doppler Sapphire"
+  },
+  {
+    "classement": 14,
+    "joueur": "XANTARES",
+    "equipe": "Eternal Fire",
+    "nationalite": "Turquie",
+    "role": "Entry Fragger",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Anubis", "Dust II", "Vertigo"],
+    "skin_le_plus_cher": "M9 Bayonet | Gamma Doppler (Emerald)"
+  },
+  {
+    "classement": 15,
+    "joueur": "YEKINDAR",
+    "equipe": "Team Liquid",
+    "nationalite": "Lettonie",
+    "role": "Entry Fragger",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Ancient", "Anubis", "Inferno"],
+    "skin_le_plus_cher": "Butterfly Knife | Marble Fade"
+  },
+  {
+    "classement": 16,
+    "joueur": "xertioN",
+    "equipe": "MOUZ",
+    "nationalite": "Israël",
+    "role": "Entry Fragger",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Nuke", "Ancient", "Vertigo"],
+    "skin_le_plus_cher": "Karambit | Fade"
+  },
+  {
+    "classement": 17,
+    "joueur": "torzsi",
+    "equipe": "MOUZ",
+    "nationalite": "Hongrie",
+    "role": "AWPer",
+    "arme_preferee": "AWP",
+    "maps_preferees": ["Nuke", "Mirage", "Ancient"],
+    "skin_le_plus_cher": "AWP | Desert Hydra"
+  },
+  {
+    "classement": 18,
+    "joueur": "NiKo",
+    "equipe": "Falcons",
+    "nationalite": "Bosnie-Herzégovine",
+    "role": "Rifler",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Nuke", "Mirage", "Dust II"],
+    "skin_le_plus_cher": "M9 Bayonet | Doppler Sapphire"
+  },
+  {
+    "classement": 19,
+    "joueur": "iM",
+    "equipe": "Natus Vincere",
+    "nationalite": "Roumanie",
+    "role": "Rifler",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Ancient", "Mirage", "Anubis"],
+    "skin_le_plus_cher": "Karambit | Lore"
+  },
+  {
+    "classement": 20,
+    "joueur": "b1t",
+    "equipe": "Natus Vincere",
+    "nationalite": "Ukraine",
+    "role": "Rifler",
+    "arme_preferee": "AK-47",
+    "maps_preferees": ["Ancient", "Anubis", "Nuke"],
+    "skin_le_plus_cher": "Butterfly Knife | Gamma Doppler (Emerald)"
+  }
+]
