@@ -1,143 +1,180 @@
-/* style.css */
-
-/* Configuration globale pour que les bordures/padding soient inclus dans la taille */
-* {
-    box-sizing: border-box; 
+/* --- Variables de Design --- */
+:root {
+    --bg-dark: #0f1114;
+    --bg-card: #1b1e22;
+    --accent-color: #de9b35; /* Orange CS2 */
+    --text-primary: #ffffff;
+    --text-secondary: #8da2ad;
+    --max-width: 1080px;
 }
 
-/* LE BODY (Fond Rose) */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    background-color: #000000; /* Rose */
-    font-family: sans-serif;
-    font-weight: bold;
-    color: white;
-    
-    /* Permet au footer de rester en bas même si le contenu est court */
+    background-color: var(--bg-dark);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
+/* --- Mise en page (Centrage & 1080px) --- */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-/* LA NAVIGATION (Jaune - à l'intérieur du Header) */
-nav {
+/* --- Header & Navigation --- */
+header {
+    background-color: rgba(26, 26, 26, 0.95);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--accent-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Limite la largeur sur les grands écrans */
-    background-color: transparent; /* Suppression du jaune moutarde pour plus d'élégance */
 }
 
-/* LE MAIN (Bleu) */
-main {
-    background-color: #446CB3; /* Bleu */
-    margin: 15px 0; /* Espace blanc entre header/footer et main */
-    padding: 100px 0; /* Pour donner du volume comme sur l'image */
-    
-    /* Propriété magique pour remplir l'espace vide */
-    flex: 1; 
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-}
-
-#en-tete {
-    display: flex;
-    flex: auto;
-    gap: 20px;
-    box-sizing: border-box;
-}
-
-#bas {
-    display: block;
-    box-sizing: border-box;
-}
-
- #button {
-  background-color: rgb(0, 0, 0);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-footer {
-    background-color: #16191b; /* Gris foncé type interface CS */
-    padding: 20px 40px;
-    border-top: 4px solid #de9b35; /* Orange iconique de CS */
-    display: flex;
-    flex-direction: column; /* Empilement vertical plus "compact" */
-    gap: 5px;
-    text-align: center; /* Alignement à gauche pour le look console */
-    font-family: 'Courier New', Courier, monospace; /* Police code/militaire */
-}
-
-footer p {
-    margin: 0;
-    color: #8da2ad; /* Bleu-gris des textes secondaires de CS */
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/* Style spécifique pour le nom du créateur */
-footer p:last-child::before {
-    content: "> "; /* Ajoute un curseur de console devant le nom */
-    color: #de9b35;
-}
-
-footer p:last-child {
-    color: #ffffff;
-}
-
-/* LE HEADER (Conteneur principal) */
-header {
-    background-color: #1a1a1a; /* Un noir plus doux pour l'élégance */
-    padding: 10px 40px;
-    display: flex;
-    justify-content: center; /* Centre le contenu global */
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Ajoute de la profondeur */
-}
-
-/* LA NAVIGATION */
-
-
-/* LE TITRE (H1) */
 nav h1 {
     font-size: 1.5rem;
-    letter-spacing: 2px;
     margin: 0;
-    color: #d6ec0a; /* On garde votre touche de jaune pour le logo/titre */
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* LA LISTE (C'est ici qu'on gère l'horizontalité) */
 nav ul {
-    list-style: none; /* Supprime les puces */
-    display: flex;    /* Aligne les éléments LI horizontalement */
-    gap: 30px;        /* Espace entre chaque lien */
+    list-style: none;
+    display: flex;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
 
-/* LES LIENS */
 nav ul li a {
-    text-decoration: none; /* Supprime le soulignement */
-    color: #ffffff;
+    text-decoration: none;
+    color: var(--text-primary);
     font-size: 0.9rem;
+    font-weight: 600;
     text-transform: uppercase;
-    transition: color 0.3s ease; /* Animation douce au survol */
+    transition: color 0.3s ease;
 }
 
-/* EFFET AU SURVOL */
 nav ul li a:hover {
-    color: #d6ec0a; /* Le lien change de couleur au passage de la souris */
+    color: var(--accent-color);
+}
+
+/* --- Main Content --- */
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+/* --- Formulaires (Contact) --- */
+form {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background: #2a2e33;
+    border: 1px solid #3d444d;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+button[type="submit"] {
+    background-color: var(--accent-color);
+    color: black;
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #f2ae45;
+    transform: translateY(-2px);
+}
+
+/* --- Galerie & Images --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #3d444d;
+    transition: border-color 0.3s;
+}
+
+.gallery-grid img:hover {
+    border-color: var(--accent-color);
+}
+
+/* --- Tableaux (Données) --- */
+table.dataTable {
+    background: var(--bg-card) !important;
+    color: white !important;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #08090a;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #2a2e33;
+}
+
+footer p {
+    margin: 5px 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+footer p:last-child {
+    color: var(--text-primary);
 }
