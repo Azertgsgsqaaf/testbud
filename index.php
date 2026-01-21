@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.6/css/dataTables.dataTables.min.css" />
     <link rel="stylesheet" type ="text/css" href="styles.css">
 </head>
-    <body>
+    <body class="page-home">
 
         <?php
         // Appel du bloc Header et du Menu>
