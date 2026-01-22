@@ -8,6 +8,8 @@
             <li><a href="contact.php">Contact</a></li>
             <li><a href="partenaires.php">Partenaires</a></li>
         </ul>
+        </div>
+        <div class="container glass"></div>
      </nav>
 </header>
 

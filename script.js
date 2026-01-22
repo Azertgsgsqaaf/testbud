@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const frameCount = 144;
     const currentFrame = (index) =>
-         `./finnish/frame_00086${(index + 400).toString().padStart(3, '0')}.jpg`;
+         `./images/frame_00086${(index + 400).toString().padStart(3, '0')}.jpg`;
     let images = [];
     let video = { frame: 0  };
     let imagesToLoad = frameCount;
