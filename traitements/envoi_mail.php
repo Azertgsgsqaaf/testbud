@@ -1,66 +1,64 @@
 <?php
 session_start();
-$_SESSION['information']='';
 
-// Vérification des données du formulaire
+// Initialisation des variables
+$affichage_retour = '';
+$erreurs = 0;
 
-$affichage_retour = '';														// Lignes à ajouter au début des vérifications
-$erreurs=0;
+// 1. Vérification du Prénom
+if (!empty($_POST['prenom'])) {
+    $prenom = htmlspecialchars($_POST['prenom']);
+} else {
+    $affichage_retour .= 'Le champ PRÉNOM est obligatoire.<br>';
+    $erreurs++;
+}
 
-// Exemple pour le nom
+// 2. Vérification du Nom
 if (!empty($_POST['nom'])) {
-	$nom=$_POST['nom'];
+    $nom = htmlspecialchars($_POST['nom']);
 } else {
-    $affichage_retour .='Le champ NOM est obligatoire<br>';
+    $affichage_retour .= 'Le champ NOM est obligatoire.<br>';
     $erreurs++;
 }
 
-
-// Exemple pour l'adresse mail
+// 3. Vérification de l'Email
 if (!empty($_POST['email'])) {
-// Si le champ email contient des données
-  
-  	// Verification du format de l'email
-  	if (filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
-      $email=$_POST['email'];
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $email = $_POST['email'];
     } else {
-    // Si l'email est incorrect 
-     								
-    $affichage_retour .='Adresse mail incorrecte<br>';
-    $erreurs++;
+        $affichage_retour .= 'L\'adresse mail est incorrecte.<br>';
+        $erreurs++;
     }
-        
-// Si le champ email est vide
 } else {
-    $affichage_retour .='Le champ EMAIL est obligatoire<br>';
+    $affichage_retour .= 'Le champ EMAIL est obligatoire.<br>';
     $erreurs++;
+}
 
-	if ($erreurs == 0) {
+// 4. Vérification du Message
+if (!empty($_POST['message'])) {
+    $message_contenu = htmlspecialchars($_POST['message']);
+} else {
+    $affichage_retour .= 'Le champ MESSAGE est obligatoire.<br>';
+    $erreurs++;
+}
 
-  // Préparation des données 
-  //Envoi du mail de contact)
-  if (mail($email_dest,$subject,$message,$headers)) {
-  $erreurs=0;
-  } else {
-  $erreurs++;
-  }
-  
-  // Préparation des données pour la confirmation
-  //Envoi du mail de confirmation
-  if (mail($email_dest,$subject,$message,$headers)) {
-  $erreurs=0;
-  } else {
-  $erreurs++;
-  }
-  
-  // Détermination du message à affichée après les tentatives d'envoi
-  	$affichage_retour='Votre demande à bien été envoyée';
+// Si aucune erreur, on tente l'envoi
+if ($erreurs == 0) {
+    $email_dest = "ton-email@domaine.fr"; // Remplace par ton vrai mail
+    $subject = "Nouveau contact de $prenom $nom";
+    $headers = "From: $email\r\nReply-To: $email\r\nContent-Type: text/html; charset=utf-8";
     
-  	if ($erreurs != 0) {
-    $affichage_retour='Echec de l\'envoi du message';
+    $corps_mail = "Nom : $nom <br> Prénom : $prenom <br> Message : <br> $message_contenu";
+
+    if (mail($email_dest, $subject, $corps_mail, $headers)) {
+        $affichage_retour = "Votre demande a bien été envoyée !";
+    } else {
+        $affichage_retour = "Échec de l'envoi du message. Veuillez réessayer plus tard.";
     }
 }
 
-	$_SESSION['information']=$affichage_retour;
-	header('location: contact.php');
-}
+// On stocke le message final en session et on redirige vers contact.php
+$_SESSION['information'] = $affichage_retour;
+header('Location: ../contact.php');
+exit();
+?>

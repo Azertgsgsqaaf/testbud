@@ -20,7 +20,7 @@
 
         <div class="hero-content">
             <div class="header">
-                <h1>Counter-Strike</h1>
+                <h1 id="TT">Counter-Strike</h1>
             </div>
         </div>
     </section>
@@ -37,11 +37,6 @@
             box-sizing: border-box;
             scroll-behavior: smooth;}
 
-        body{
-            font-family: 'Azonix', sans-serif;
-
-        }
-
         img{
             width: 100%;
             height: 100%;
@@ -50,9 +45,15 @@
 
         h1 {
             font-family: 'Roboto', sans-serif;
-            font-size: 100px;
+            font-size: 60px;
             font-weight: 700;
             line-height: 1.1;
+        }
+
+        #TT {
+            color: white;
+            text-align: center;
+            font-size: 100px;
         }
 
         p {

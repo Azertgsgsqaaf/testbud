@@ -1,55 +1,56 @@
-<?php
-session_start();
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>ACCUEIL</title>
+    <title>Contact - Counter-Strike</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.6/css/dataTables.dataTables.min.css" />
-    <link rel="stylesheet" type ="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-    <body>
+<body class="page-contact">
 
-        <?php
-        // Appel du bloc Header et du Menu>
-        require('header.php');
-        ?>
+    <?php require('header.php'); ?>
 
-        <main>
-            <?php
-                if (isset($_SESSION['information'])) {
-                echo '<p>'.$_SESSION['information'].'</p>'."\n";
-                session_unset();
-                }
-            ?>
+    <main>
+        <div class="contact-container">
+            <h2>Contactez-nous</h2>
+            
+            <?php if (isset($_SESSION['information']) && !empty($_SESSION['information'])): ?>
+                <div class="info-msg">
+                    <?php 
+                        echo $_SESSION['information']; 
+                        unset($_SESSION['information']); // On vide le message après affichage
+                    ?>
+                </div>
+            <?php endif; ?>
+
             <form action="traitements/envoi_mail.php" method="POST">
                 <div id="en-tete">
-                    <div>
+                    <div class="input-group">
                         <label for="prenom">Prénom <span>*</span></label>
-                        <input type="text" name="prenom" id="prenom" />
+                        <input type="text" name="prenom" id="prenom" required />
                     </div>
-                    <div>
+                    <div class="input-group">
                         <label for="nom">Nom <span>*</span></label>
-                        <input type="text" name="nom" id="nom" />
+                        <input type="text" name="nom" id="nom" required />
                     </div>
                 </div>
+                
                 <div id="bas">
-                    <div>
+                    <div class="input-group">
                         <label for="email">E-mail <span>*</span></label>
-                        <input type="email" name="email" id="email" placeholder="nom@domaine.fr" />
+                        <input type="email" name="email" id="email" placeholder="nom@domaine.fr" required />
                     </div>
-                    <div>
+                    <div class="input-group">
                         <label for="message">Message <span>*</span></label>
-                        <input type="message" name="message" id="message" placeholder="Votre message"></textarea>
+                        <textarea name="message" id="message" placeholder="Votre message" rows="5" required></textarea>
                     </div>
-                <button id="button" type="submit" value="Envoyer" />
+                </div>
+                
+                <button id="button" type="submit">Envoyer le message</button>
             </form>
-        </main>
+        </div>
+    </main>
 
-        <?php
-        // Appel du Pied de Page
-        require('footer.php');
-        ?>
-    </body>
+    <?php require('footer.php'); ?>
+</body>
 </html>
